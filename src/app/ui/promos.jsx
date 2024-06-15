@@ -12,7 +12,7 @@ export default function Promos() {
           height={116}
           width={416}
           alt="veryfazty table presents offers"
-          className=" -z-50 -mt-24" // Ajuste de margen para posicionar la imagen correctamente
+          className=" -z-50 -mt-24 select-none" // Ajuste de margen para posicionar la imagen correctamente
         />
       </div>
     </div>

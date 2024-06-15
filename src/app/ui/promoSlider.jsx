@@ -16,13 +16,14 @@ export default class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
+      arrows: false,
     };
     return (
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="max-w-sm">
+          <div key={index} className="w-full">
             <a
-              className="flex h-full max-w-sm items-center justify-center"
+              className="flex h-full max-w-sm select-none items-center justify-center"
               href={goPromo1}
               target="_blank"
               rel="noreferrer"

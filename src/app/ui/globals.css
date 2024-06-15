@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Yellowchalk';
-  src: url("../../../public/fonts/Yellowchalk\ Regular.ttf") format('truetype');
+  font-family: "Yellowchalk";
+  src: url("../../../public/fonts/Yellowchalk\ Regular.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
 }
 /* :root {
   --foreground-rgb: 0, 0, 0;
@@ -33,7 +42,7 @@
 } */
 /* Activity13 styles */
 body {
-  font-family: 'yellowchalk';
+  font-family: "yellowchalk";
 }
 
 /* Header */
@@ -117,7 +126,7 @@ body {
 }
 
 .customhr {
-  background-image: url('/raya.png') no-repeat;
+  background-image: url("/raya.png") no-repeat;
   height: 1px;
   width: 80%;
   background-color: #0070f3;
@@ -146,7 +155,7 @@ body {
 /* Footer */
 .footer {
   background-color: #0070f3;
-  height: 5%
+  height: 5%;
 }
 
 .footer a {
