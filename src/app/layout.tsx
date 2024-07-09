@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/src/app/ui/header";
+import Footer from "@/src/app/ui/footer";
+
 import "./ui/globals.css";
 
 export const metadata: Metadata = {
@@ -23,6 +25,9 @@ export default function RootLayout({
           <Header />
         </nav>
         {children}
+        <section className="relative z-20 h-full bg-bluefazty">
+          <Footer />
+        </section>
       </body>
     </html>
   );

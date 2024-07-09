@@ -1,7 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import Link from "next/link";
-
+import BackArrow from "../ui/back_arrow";
 export const metadata: Metadata = {
   title: "Bros Food Vichayito",
   description:
@@ -11,41 +10,16 @@ export const metadata: Metadata = {
 export default function Brosfood() {
   return (
     <>
-      <div className="relative flex w-screen justify-center pt-10">
+      <div></div>
+      <div className="static flex justify-center pt-10">
         <Image
-          className="rounded-top rounded-bottom"
-          src={`/images/brosfood_carta_2024.png`}
+          className="w-100"
+          src={`/images/2024_carta_sin_logo.jpg`}
           width="720"
           height="720"
           alt="veryfazty"
         />
-        {/* <div className="fixed-top">
-        <button
-          href="/"
-          onClick={() => router.push("/")}
-          className={CustomStyles.btnFlotante}
-        >
-          <a>
-            <Image
-              className="rounded-top rounded-bottom"
-              src="/images/arrow-left-short.svg"
-              width="10px"
-              height="10px"
-              alt="veryfazt-return"
-            />
-            <h3>Atrás</h3>
-          </a>
-        </button>
-      </div> */}
-        <Link href="/" className="absolute ">
-          <Image
-            className="rounded-top rounded-bottom"
-            src="/images/arrow-left-short.svg"
-            width={100}
-            height={100}
-            alt="veryfazt-return"
-          />
-        </Link>
+        <BackArrow />
         <br />
       </div>
     </>

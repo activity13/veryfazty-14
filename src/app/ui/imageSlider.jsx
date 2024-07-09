@@ -3,13 +3,10 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import promoBros from "../../../public/images/promo-bros.png";
-import promoBros2 from "../../../public/images/promo-bros-2.png";
 
 export default class SimpleSlider extends Component {
   render() {
-    const goPromo1 = "https://web.whatsapp.com";
-    const images = [promoBros, promoBros2];
+    const { imageNames, goPromo } = this.props;
     const settings = {
       dots: false,
       infinite: true,
@@ -20,17 +17,17 @@ export default class SimpleSlider extends Component {
     };
     return (
       <Slider {...settings}>
-        {images.map((image, index) => (
+        {imageNames.map((image, index) => (
           <div key={index} className="w-full">
             <a
               className="flex h-full max-w-sm select-none items-center justify-center"
-              href={goPromo1}
+              href={goPromo}
               target="_blank"
               rel="noreferrer"
             >
               <Image
-                source={image}
-                src={image}
+                source={`/images/${image}`}
+                src={`/images/${image}`}
                 height={390}
                 width={350}
                 alt={`Image ${index + 1}`}

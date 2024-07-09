@@ -3,10 +3,13 @@ import tableStand from "../../../public/images/table_small.png";
 import Slider from "../ui/promoSlider";
 
 export default function Promos() {
+  const imageNames = ["promo-bros.png", "promo-bros-2.png"];
+  const goPromo = "https://wa.me/519";
+
   return (
     <div className="relative flex h-full items-center justify-center">
       <div className="max-w-sm">
-        <Slider />
+        <Slider imageNames={imageNames} goPromo={goPromo} />
         <Image
           src={tableStand}
           height={116}

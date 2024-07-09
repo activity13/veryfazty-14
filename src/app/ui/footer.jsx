@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="relative">
-      <div className="relative z-20">
+      <div className="relative z-30">
         <div className="container-fluid bg-bluefazty py-4 text-center text-white">
           <h3>HAZ TU PEDIDO</h3>
           <h4>ESCRIBE o LLAMA</h4>
@@ -53,7 +53,7 @@ const Footer = () => {
           <span>2023 © veryfazty.com, todos los derechos reservados.</span>
         </div>
       </div>
-      <section className="fixed bottom-0 z-10 flex w-full flex-row items-center justify-center bg-bluefazty text-white">
+      <section className="fixed bottom-0 z-20 flex w-full flex-row items-center justify-center bg-bluefazty text-white">
         <a
           className="flex  items-center justify-center"
           href="https://wa.me/51924380097"

@@ -3,12 +3,12 @@ import Link from "next/link";
 import React from "react";
 const Partners = () => {
   return (
-    <div className="container">
-      <header className="flex justify-center">
-        <h2 className="text-6xl font-bold ">RESTAURANTES</h2>
+    <div className="container h-screen">
+      <header className="text-center">
+        <h2 className="text-6xl font-bold">RESTAURANTES</h2>
       </header>
       <hr />
-      <div className="mt-11 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
+      <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
         <div className="flex justify-center">
           <Link
             href="/las-cabanas-de-antica-vichayito"
