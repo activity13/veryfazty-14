@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 export default class SimpleSlider extends Component {
   render() {
-    const { imageNames } = this.props;
+    const { imageNames, goLink } = this.props;
     const settings = {
       dots: false,
       infinite: true,
@@ -19,15 +19,22 @@ export default class SimpleSlider extends Component {
     return (
       <Slider {...settings}>
         {imageNames.map((image, index) => (
-          <div key={index} className="w-1/2">
-            <Image
-              source={`/images/${image}`}
-              src={`/images/${image}`}
-              height={500}
-              width={500}
-              alt={`Image ${index + 1}`}
-              priority
-            />
+          <div key={index} className="w-full">
+            <a
+              className="flex h-full max-w-sm select-none items-center justify-center"
+              href={goLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image
+                source={`/images/${image}`}
+                src={`/images/${image}`}
+                height={1000}
+                width={1000}
+                alt={`Image ${index + 1}`}
+                priority
+              />
+            </a>
           </div>
         ))}
       </Slider>

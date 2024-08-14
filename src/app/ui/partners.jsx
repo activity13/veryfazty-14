@@ -60,7 +60,7 @@ const Partners = () => {
           <Link href="/deli-antica" className="border-none bg-inherit bg-none">
             <Image
               className="cursor-pointer rounded-lg"
-              src="/images/deliantica.jpg"
+              src="/images/deliAntica.png"
               width={150}
               height={150}
               alt="Deli antica socio delivery en tienda web delivery veryfazty vichayito"
