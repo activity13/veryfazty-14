@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
         <nav className="flex h-1/4 flex-col justify-center align-middle">
           <Header />
