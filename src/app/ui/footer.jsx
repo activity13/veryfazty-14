@@ -60,7 +60,7 @@ const Footer = () => {
           rel="noreferrer"
           target="_blank"
         >
-          <u className="mr-2 mt-1 flex items-center">contacto</u>
+          <u className="mr-2 mt-1 flex items-center">¡Haz tu pedido!</u>
           <span className="mt-2 flex items-center">+51 924 380 097</span>
           <div className="ml-2 mt-1 flex items-center">
             <Image
