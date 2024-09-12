@@ -12,11 +12,11 @@ export default function Page() {
         </h1>
         <div>
           <Image
-            className="md:pt-3"
+            className="h-auto w-auto md:pt-3"
             src="/images/solo-moto.png"
-            width="65"
-            height="50"
-            alt="logo de veryfazty, reparto a domicilio en vichayito y pocitas"
+            alt="Logo de veryfazty, reparto a domicilio en vichayito y pocitas"
+            width={45}
+            height={55}
           />
         </div>
       </div>

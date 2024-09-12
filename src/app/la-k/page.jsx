@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import karta from "../../../public/images/la-k-karta.png";
@@ -15,7 +14,6 @@ export default function LaK() {
     <div className="min-h-screen">
       <Cartelera />
       <RestaurantCard name={karta} alt={alt} description={description} />
-
       <BackArrow />
     </div>
   );
