@@ -5,6 +5,7 @@ import RestaurantCard from "../ui/menuLoader";
 import pizzas from "../../../public/images/la-k-pizzas.png";
 
 export default function LaK() {
+  const la_karta = "la-k-karta.png";
   const alt = "la k vichayito delivery las pocitas";
   const description =
     "carta de la k contiene opciones marinas, piqueos, postres y mucho más";
@@ -13,7 +14,7 @@ export default function LaK() {
   return (
     <div className="min-h-screen">
       <Cartelera />
-      <RestaurantCard name={karta} alt={alt} description={description} />
+      <RestaurantCard name={la_karta} alt={alt} description={description} />
       <BackArrow />
     </div>
   );

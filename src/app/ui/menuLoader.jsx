@@ -10,11 +10,9 @@ export default function RestaurantCard({ name, alt, description }) {
     const img = new Image();
     img.src = `/images/${name}`;
     img.onload = () => {
-      alert("image loaded");
       let maxWidth = 800;
       let width = img.naturalWidth;
       let height = img.naturalHeight;
-      console.log("maxWidth", maxWidth);
       // Limitar el max width
       if (width > maxWidth) {
         width = maxWidth;
@@ -34,6 +32,7 @@ export default function RestaurantCard({ name, alt, description }) {
             description={description}
             height={dimensions.height}
             width={dimensions.width}
+            priority={true}
           />
         </div>
       </div>
