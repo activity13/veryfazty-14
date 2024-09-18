@@ -11,22 +11,6 @@ export default function Cartelera({ config }) {
   console.log(config);
   return (
     <div className="flex justify-center">
-      {/* <div className="relative inline-block text-left">
-        <button
-          onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
-          className="rounded bg-blue-600 px-4 py-2 text-white"
-        >
-          Hover over me
-        </button>
-
-        {isOpen && (
-          <div className="absolute left-1/2 z-10 mt-2 w-32 -translate-x-1/2 transform rounded bg-gray-800 p-2 text-sm text-white shadow-lg">
-            Tooltip text here
-          </div>
-        )}
-      </div> */}
-
       <div
         className={`container flex max-w-[220px] flex-col items-center rounded-xl bg-gradient-to-b from-${config.color}-200 to-${config.color}-50 p-5 md:max-w-[600px] md:flex-row md:justify-center`}
       >

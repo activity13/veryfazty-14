@@ -1,6 +1,12 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+export const metadata = {
+  title:
+    "La K Vichayito - Delivery en Vichayito y Las Pocitas: Pizzas, Pastas, Postres y Más",
+  description:
+    "Disfruta del mejor delivery en Vichayito y Las Pocitas con La K: Pizzas artesanales, pastas frescas, hamburguesas gourmet, postres caseros, y más. Ingredientes frescos como arúgula de nuestro huerto. Haz tu pedido ahora.",
+};
 export default function LaK() {
   const resto_config = {
     name: "la-k",
