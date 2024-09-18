@@ -1,11 +1,11 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
-
 export default function LaK() {
   const resto_config = {
     name: "la-k",
     logo: "la K.png",
+    color: "red",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",
       horario_general: {

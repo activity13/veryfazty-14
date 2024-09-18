@@ -2,6 +2,7 @@
 
 import Menu from "next/image";
 import { useEffect, useState } from "react";
+import { Tab, TabGroup, TabList } from "@headlessui/react";
 
 export default function RestaurantCard({ options, alt, description }) {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -31,29 +32,31 @@ export default function RestaurantCard({ options, alt, description }) {
   }, [selectedOption, listOptions]);
 
   return (
-    <>
+    <div className="w-full">
       <div className="flex flex-col items-center p-2">
-        <ul className="flex justify-center space-x-4">
-          {displayOptions.map((name, index) => (
-            <li key={index}>
-              <button
-                className={`
-                  ${
-                    listOptions[index] === selectedOption
-                      ? "border-spacing-1 p-2 text-[35px] text-blue-700"
-                      : "border-spacing-1 p-2 text-[34px]"
-                  }`}
+        <TabGroup className="flex justify-center space-x-4">
+          <TabList className="flex gap-4">
+            {displayOptions.map((name, index) => (
+              <Tab
+                key={index}
                 onClick={() => {
                   setSelectedOption(listOptions[index]);
                 }}
+                className="rounded-full 
+                px-3 py-1 text-xl font-semibold text-black focus:outline-none 
+                data-[hover]:bg-blue-200 
+                data-[selected]:bg-bluefazty
+                data-[selected]:text-white 
+                data-[focus]:outline-white 
+                md:text-2xl"
               >
                 {name}
-              </button>
-            </li>
-          ))}
-        </ul>
+              </Tab>
+            ))}
+          </TabList>
+        </TabGroup>
       </div>
-      <div className="container flex w-full justify-center ">
+      <div className=" flex justify-center ">
         <div className="m-3 max-w-[335px] sm:max-w-xl">
           <Menu
             src={`/images/${selectedOption}`}
@@ -66,6 +69,6 @@ export default function RestaurantCard({ options, alt, description }) {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 }
