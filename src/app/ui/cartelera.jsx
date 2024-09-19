@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function Cartelera({ config }) {
   const servicios = Object.keys(config.servicios_adicionales);
-  const [isOpen, setIsOpen] = useState(false);
 
   console.log(servicios);
   console.log(config);
