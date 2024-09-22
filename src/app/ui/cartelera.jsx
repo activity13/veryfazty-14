@@ -3,18 +3,23 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Cartelera({ config }) {
+export default function Cartelera({ config, alt, description }) {
   const servicios = Object.keys(config.servicios_adicionales);
 
-  console.log(servicios);
-  console.log(config);
+  console.log(alt);
   return (
     <div className="flex justify-center">
       <div
         className={`container flex max-w-[220px] flex-col items-center rounded-xl bg-gradient-to-b from-${config.color}-200 to-${config.color}-50 p-5 md:max-w-[600px] md:flex-row md:justify-center`}
       >
         <div className="flex justify-center md:basis-1/2">
-          <Image src={`/images/${config.logo}`} width={175} height={175} />
+          <Image
+            src={`/images/${config.logo}`}
+            width={175}
+            height={175}
+            alt={alt}
+            description={description}
+          />
         </div>
         <div className="m-3 flex h-full flex-col items-center justify-center md:basis-1/2 md:items-start">
           <h1 className="m-2 flex w-full justify-center text-center align-bottom">

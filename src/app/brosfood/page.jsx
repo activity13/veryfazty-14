@@ -11,9 +11,9 @@ export default function BrosFood() {
   const resto_config = {
     name: "bros foods",
     logo: "brosfood.png",
-    color: "orange",
+    color: "yellow",
     horarios: {
-      publicado: "DE 7 A 11 PM, DESCANSAMOS LOS MIÉRCOLES",
+      publicado: "DE 7 A 11 PM, DESCANSAN LOS MIÉRCOLES",
       horario_general: {
         apertura: "19:00",
         cierre: "23:00",
@@ -35,7 +35,7 @@ export default function BrosFood() {
       },
       envase_eco: {
         value: true,
-        mensaje: "+ S/1",
+        mensaje: "+ S/2",
       },
     },
   };
