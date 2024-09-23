@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Cartelera({ config, alt, description }) {
   const servicios = Object.keys(config.servicios_adicionales);
 
-  console.log(alt);
   return (
     <div className="flex justify-center">
       <div
@@ -18,6 +16,7 @@ export default function Cartelera({ config, alt, description }) {
             width={175}
             height={175}
             alt={alt}
+            className="rounded"
             description={description}
           />
         </div>

@@ -4,22 +4,24 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// import DialogFrame from "./dialog";
 
 export default class SimpleSlider extends Component {
   render() {
     const { imageNames } = this.props;
     const settings = {
-      dots: false,
+      dots: true,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
     };
+
     return (
       <Slider {...settings}>
         {imageNames.map((image, index) => (
-          <div key={index} className="w-1/2">
+          <div key={index} className="text-center">
             <Image
               source={`/images/${image}`}
               src={`/images/${image}`}

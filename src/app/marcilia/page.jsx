@@ -50,7 +50,7 @@ export default function BrosFood() {
 
   return (
     <div className="min-h-screen">
-      <Cartelera config={resto_config} />
+      <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />
     </div>

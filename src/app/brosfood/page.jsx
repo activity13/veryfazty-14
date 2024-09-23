@@ -9,7 +9,7 @@ export const metadata = {
 };
 export default function BrosFood() {
   const resto_config = {
-    name: "bros foods",
+    name: "Bros Food",
     logo: "brosfood.png",
     color: "yellow",
     horarios: {
@@ -49,7 +49,7 @@ export default function BrosFood() {
 
   return (
     <div className="min-h-screen">
-      <Cartelera config={resto_config} />
+      <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />
     </div>
