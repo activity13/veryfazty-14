@@ -47,6 +47,11 @@ export default function DeliAntica() {
       },
     },
   };
+
+  const alt = "Deli Antica Vichayito - Delivery en Vichayito y Las Pocitas";
+  const description =
+    "Disfruta del mejor delivery en Vichayito y Las Pocitas con Deli Antica";
+
   return (
     <div className="max-w-screen min-h-screen">
       <Cartelera config={resto_config} alt={alt} description={description} />
