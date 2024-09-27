@@ -10,7 +10,7 @@ export const metadata = {
 export default function LaK() {
   const resto_config = {
     name: "la-k",
-    logo: "la K.png",
+    logo: "la_k_logo.png",
     color: "red",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",

@@ -27,7 +27,7 @@ const Partners = () => {
           <Link href="/la-k" className="border-none bg-inherit bg-none">
             <Image
               className="cursor-pointer rounded-lg"
-              src="/images/La K.png"
+              src="/images/la_k_logo.png"
               width={150}
               height={150}
               alt="La K, socio delivery en vichayito tienda delivery veryfazty"

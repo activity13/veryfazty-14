@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { Tab, TabGroup, TabList } from "@headlessui/react";
 
 export default function RestaurantCard({ options, alt, description }) {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [selectedOption, setSelectedOption] = useState(null);
 
   const displayOptions = Object.keys(options);
@@ -15,20 +14,6 @@ export default function RestaurantCard({ options, alt, description }) {
     if (selectedOption === null && listOptions.length > 0) {
       setSelectedOption(listOptions[0]);
     }
-
-    const img = new Image();
-    img.src = `/images/${selectedOption}`;
-    img.onload = () => {
-      // console.log(selectedOption);
-      let maxWidth = 800;
-      let width = img.naturalWidth;
-      let height = img.naturalHeight;
-      // Limitar el max width
-      if (width > maxWidth) {
-        width = maxWidth;
-      }
-      setDimensions({ width: width, height: height });
-    };
   }, [selectedOption, listOptions]);
 
   return (
@@ -39,16 +24,9 @@ export default function RestaurantCard({ options, alt, description }) {
             {displayOptions.map((name, index) => (
               <Tab
                 key={index}
-                onClick={() => {
-                  setSelectedOption(listOptions[index]);
-                }}
-                className="rounded-full 
-                px-3 py-1 text-xl font-semibold text-black focus:outline-none 
-                data-[hover]:bg-blue-200 
-                data-[selected]:bg-bluefazty
-                data-[selected]:text-white 
-                data-[focus]:outline-white 
-                md:text-2xl"
+                onClick={() => setSelectedOption(listOptions[index])}
+                className="rounded-full px-3 py-1 text-xl font-semibold text-black focus:outline-none 
+                data-[hover]:bg-blue-200 data-[selected]:bg-bluefazty data-[selected]:text-white md:text-2xl"
               >
                 {name}
               </Tab>
@@ -56,17 +34,20 @@ export default function RestaurantCard({ options, alt, description }) {
           </TabList>
         </TabGroup>
       </div>
-      <div className=" flex justify-center ">
+      <div className="flex justify-center">
         <div className="m-3 max-w-[335px] sm:max-w-xl">
-          <Menu
-            src={`/images/${selectedOption}`}
-            className="img-fluid rounded-top"
-            alt={alt}
-            description={description}
-            height={dimensions.height}
-            width={dimensions.width}
-            priority={true}
-          />
+          {selectedOption && (
+            <Menu
+              src={`/images/${selectedOption}`}
+              alt={alt}
+              description={description}
+              layout="responsive" // Ajusta automáticamente la relación de aspecto
+              width={800} // Limita el ancho máximo
+              height={450} // Relación de aspecto 16:9
+              objectFit="cover" // Mantiene la relación de aspecto
+              priority={true}
+            />
+          )}
         </div>
       </div>
     </div>
