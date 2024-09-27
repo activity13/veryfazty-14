@@ -21,7 +21,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <GoogleAnalytics gaId="G-YQSMK35DN8" />
       <body>
         <nav className="flex h-1/4 flex-col justify-center align-middle">
           <Header />
@@ -31,6 +30,8 @@ export default function RootLayout({
           <Footer />
         </section>
       </body>
+      <GoogleAnalytics gaId="G-YQSMK35DN8" />
+      <GoogleTagManager gtmId="G-YQSMK35DN8" />
     </html>
   );
 }
