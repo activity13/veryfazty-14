@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/src/app/ui/header";
 import Footer from "@/src/app/ui/footer";
 
@@ -20,6 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
+      <GoogleAnalytics gaId="G-YQSMK35DN8" />
       <body>
         <nav className="flex h-1/4 flex-col justify-center align-middle">
           <Header />
