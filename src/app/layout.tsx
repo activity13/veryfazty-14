@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Delivery Vichayito Sur y Las Pocitas - Veryfazty",
   },
   description:
-    "Delivery Vichayito - Mejores restaurantes en Vichayito y Las Pocitas, pizzas, pastas, hamburguesas, postres en Vichayito y Las Pocitas. Antica Pizzería Vichayito, la k vichayito, Bros Foods Vichayito, y mucho más.",
+    "Servicio de Delivery en Los Órganos, Vichayito - Mejores restaurantes en Vichayito y también en Máncora, Las Pocitas. Pizzas, pastas, hamburguesas, postres en Vichayito y Las Pocitas. Antica Pizzería Vichayito, la k vichayito, Bros Foods Vichayito, y mucho más.",
 };
 
 export default function RootLayout({
