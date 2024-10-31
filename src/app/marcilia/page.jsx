@@ -42,7 +42,7 @@ export default function BrosFood() {
 
   const options = {
     Carta: "marcilia-carta-actual.jpg",
-    Menu: "marcilia-vichayito-carta-2024.png",
+    Menu: "menu-marcilia-2024.jpg",
   };
   const alt = "Marcilia Vichayito - Delivery en Vichayito y Las Pocitas";
   const description =
