@@ -53,7 +53,7 @@ const Footer = () => {
           <span>2023 © veryfazty.com, todos los derechos reservados.</span>
         </div>
       </div>
-      <section className="fixed bottom-0 z-20 flex w-full flex-row items-center justify-center bg-bluefazty text-white">
+      {/* <section className="fixed bottom-0 z-20 flex w-full flex-row items-center justify-center bg-bluefazty text-white">
         <a
           className="flex  items-center justify-center"
           href="https://wa.me/51924380097"
@@ -79,7 +79,7 @@ const Footer = () => {
             />
           </div>
         </a>
-      </section>
+      </section> */}
     </div>
   );
 };
