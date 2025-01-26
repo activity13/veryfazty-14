@@ -4,6 +4,7 @@ import Header from "@/src/app/ui/header";
 import Footer from "@/src/app/ui/footer";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./ui/globals.css";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({
           <Footer />
         </section>
         <Analytics />
+        <SpeedInsights />
       </body>
       <GoogleAnalytics gaId="G-YQSMK35DN8" />
       <GoogleTagManager gtmId="G-YQSMK35DN8" />
