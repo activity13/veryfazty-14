@@ -47,7 +47,7 @@ export default function Promos() {
   const desktopImageNames = ["promo-bros.png", "promo-bros-2.png"];
   const mobileImageNames = ["brosPromoMobile.jpg", "brosPromoMobile2.jpg"];
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(true);
   const [imageNames, setImageNames] = useState(mobileImageNames);
 
   useEffect(() => {
