@@ -47,10 +47,8 @@ export default function Promos() {
   const desktopImageNames = ["promo-bros.png", "promo-bros-2.png"];
   const mobileImageNames = ["brosPromoMobile.jpg", "brosPromoMobile2.jpg"];
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 766.39);
-  const [imageNames, setImageNames] = useState(
-    window.innerWidth <= 766.39 ? mobileImageNames : desktopImageNames,
-  );
+  const [isMobile, setIsMobile] = useState(false);
+  const [imageNames, setImageNames] = useState(desktopImageNames);
 
   useEffect(() => {
     const handleResize = () => {
