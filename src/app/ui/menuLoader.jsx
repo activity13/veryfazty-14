@@ -35,7 +35,7 @@ export default function RestaurantCard({ options, alt, description }) {
         </TabGroup>
       </div>
       <div className="flex justify-center">
-        <div className="m-3 max-w-[335px] sm:max-w-xl">
+        <div className="m-3  max-w-[335px] sm:max-w-xl">
           {selectedOption && (
             <Menu
               src={`/images/${selectedOption}`}
@@ -46,6 +46,7 @@ export default function RestaurantCard({ options, alt, description }) {
               height={450} // Relación de aspecto 16:9
               objectFit="cover" // Mantiene la relación de aspecto
               priority={true}
+              quality={80}
             />
           )}
         </div>

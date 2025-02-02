@@ -3,9 +3,9 @@ import Link from "next/link";
 import React from "react";
 const Partners = () => {
   return (
-    <div className="container h-screen">
+    <div className="container-screen h-screen">
       <header className="text-center">
-        <h2 className="text-6xl font-bold">RESTAURANTES</h2>
+        <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
       <hr />
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">

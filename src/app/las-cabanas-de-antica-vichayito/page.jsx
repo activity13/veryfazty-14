@@ -44,9 +44,10 @@ export default function BrosFood() {
     DIA: "antica-dia.jpg",
     NOCHE: "antica-noche.jpg",
   };
-  const alt = "Bros Food Vichayito - Delivery en Vichayito y Las Pocitas";
+  const alt =
+    "Antica Pizzería Delivery en Vichayito y Las Pocitas de Las Cabañas de Antica Vichayito";
   const description =
-    "Disfruta del mejor delivery en Vichayito y Las Pocitas con Bros Food";
+    "delivery antica vichayito, delivery antica pizzeria, delivery pizza las pocitas";
 
   return (
     <div className="min-h-screen">

@@ -1,0 +1,10 @@
+{
+  "redirects": [],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/cartas/$1",
+      "has": [{ "type": "host", "value": "cartas.veryfazty.com" }]
+    }
+  ]
+}
