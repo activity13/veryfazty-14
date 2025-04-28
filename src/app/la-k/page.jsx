@@ -41,8 +41,8 @@ export default function LaK() {
   };
 
   const options = {
-    Carta: "la-k-karta.png",
-    Pizzas: "la-k-pizzas.png",
+    Carta: "la-k-karta.jpg",
+    Pizzas: "la-k-pizzas.jpg",
   };
   const alt = "la k vichayito delivery las pocitas";
   const description =

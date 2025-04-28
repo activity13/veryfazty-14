@@ -1,4 +1,4 @@
-import Slider from "../ui/imageSlider";
+import Slider from "../ui/imageSquareSlider";
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 export const metadata = {

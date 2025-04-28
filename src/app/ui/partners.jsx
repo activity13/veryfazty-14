@@ -3,9 +3,9 @@ import Link from "next/link";
 import React from "react";
 const Partners = () => {
   return (
-    <div className="container h-screen">
+    <div className="container-screen h-screen">
       <header className="text-center">
-        <h2 className="text-6xl font-bold">RESTAURANTES</h2>
+        <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
       <hr />
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
@@ -35,17 +35,6 @@ const Partners = () => {
           </Link>
         </div>
         <div className="flex justify-center">
-          <Link href="/marcilia" className="border-none bg-inherit bg-none">
-            <Image
-              className="cursor-pointer rounded-lg"
-              src="/images/Marcilia.png"
-              width={150}
-              height={150}
-              alt="Marcilia Vichayito, socio delivery en Vichayito en tienda veryfazty"
-            />
-          </Link>
-        </div>
-        <div className="flex justify-center">
           <Link href="/brosfood" className="border-none bg-inherit bg-none">
             <Image
               className="cursor-pointer rounded-lg"
@@ -56,7 +45,7 @@ const Partners = () => {
             />
           </Link>
         </div>
-        <div className="col-span-2 flex justify-center sm:col-span-1">
+        <div className="flex justify-center">
           <Link href="/deli-antica" className="border-none bg-inherit bg-none">
             <Image
               className="cursor-pointer rounded-lg"

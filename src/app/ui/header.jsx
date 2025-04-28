@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <header className="h-[25vh] pt-5 text-center">
+    <header className="h-[18vh] pt-5  text-center md:h-[25vh]">
       <div className="mb-5 flex flex-row justify-center">
         <h1 className="title text-5xl md:text-7xl">
           <Link href="/">Veryfazty</Link>
