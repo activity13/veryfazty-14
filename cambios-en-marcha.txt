@@ -1,0 +1,7 @@
+31/5/2025
+
+Se agrego  @svgr/webpack para poder manipular bien archivos .svg
+Se está agregando el restaurante vivak. 
+En Vivak se cambio el modo en que la carta se muestra, se usa codigo dediccado para lograr el resultado
+Se cambió el orden en el que se muestran los restaurantes en el componente partners
+Se desactivaron los iconos de la cartelera que indican el tipo de envases etc. tipo comentario
