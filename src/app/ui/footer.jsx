@@ -53,7 +53,7 @@ const Footer = () => {
           <span>2024 © veryfazty.com, todos los derechos reservados.</span>
         </div>
       </div>
-      <section className="fixed bottom-0 z-20 flex w-full flex-row items-center justify-center bg-bluefazty text-white">
+      <section className="bg-bluefazty fixed bottom-0 z-20 flex w-full flex-row items-center justify-center text-white">
         <a
           className="flex  items-center justify-center"
           href="https://wa.me/51924380097"
