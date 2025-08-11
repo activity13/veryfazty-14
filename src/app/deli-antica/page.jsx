@@ -19,7 +19,7 @@ export default function DeliAntica() {
   const resto_config = {
     name: "Deli Antica Vichayito",
     logo: "deliAntica.png",
-    color: "brown",
+    color: "#8d3d21",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",
       horario_general: {
@@ -31,6 +31,11 @@ export default function DeliAntica() {
         apertura: null,
         cierre: null,
       },
+    },
+    condiciones: {
+      postres:
+        "La disponibilidad de los postres puede variar según el stock disponible.",
+      envases: "Deli Antica no cobra por envases.",
     },
     servicios_adicionales: {
       caja_de_pizza: {

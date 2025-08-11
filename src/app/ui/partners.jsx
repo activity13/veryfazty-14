@@ -7,7 +7,6 @@ const Partners = () => {
       <header className="text-center">
         <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
-      <hr />
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
         <div className="flex justify-center">
           <Link href="/la-k" className="border-none bg-inherit bg-none">
@@ -39,6 +38,17 @@ const Partners = () => {
             <Image
               className="cursor-pointer rounded-lg"
               src="/images/playa-palmeras.png"
+              width={150}
+              height={150}
+              alt="Las cabañas de antica socio delivery en tienda web delivery veryfazty vichayito"
+            />
+          </Link>
+        </div>
+        <div className="flex justify-center">
+          <Link href="/marcilia-vichayito" className="grid place-items-center">
+            <Image
+              className="cursor-pointer rounded-lg"
+              src="/images/Marcilia.png"
               width={150}
               height={150}
               alt="Las cabañas de antica socio delivery en tienda web delivery veryfazty vichayito"

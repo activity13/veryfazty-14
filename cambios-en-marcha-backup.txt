@@ -1,0 +1,21 @@
+31/5/2025
+
+Se agrego  @svgr/webpack para poder manipular bien archivos .svg
+Se está agregando el restaurante vivak. 
+En Vivak se cambio el modo en que la carta se muestra, se usa codigo dedicado para lograr el resultado
+Se cambió el orden en el que se muestran los restaurantes en el componente partners
+Se desactivaron los iconos de la cartelera que indican el tipo de envases etc. tipo comentario
+
+12/07/2025
+
+- Se actualizó a tailwind v4. Se eliminó el archivo tailwind.config.ts puesto que la versión nuvea no lo requiere y ahora se usa el archivo postcss.config.json
+- Se agregó tailwind-scrollbar.
+- Se agregó Playa Palmeras, pendiente de cobro. 
+
+11/8/2025
+
+- Se reintegró la carta de marcilia vichayito
+- Se cambió la ruta marcilia a marcilia-vichayito
+- se actualizó algunos elementos en pro a la estetica del sitio
+- Se agregó a la cartelera de los restaurantes el boton para conocer los terminos y condiciones del restaurante que se pide. 
+- Este botón abre un Dialogo (headless ui) mostrando la nueva propiedad de config: condiciones. 

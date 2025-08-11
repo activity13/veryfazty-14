@@ -9,9 +9,9 @@ export const metadata = {
 };
 export default function LaK() {
   const resto_config = {
-    name: "la-k",
+    name: "La K Vichayito",
     logo: "la_k_logo.png",
-    color: "red",
+    color: "#0070f3",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",
       horario_general: {
@@ -23,6 +23,12 @@ export default function LaK() {
         apertura: "19:00",
         cierre: "21:45",
       },
+    },
+    condiciones: {
+      postres:
+        "La disponibilidad de los postres puede variar según el stock disponible.",
+      envases:
+        "Por cada plato pedido, se cobrará un envase de S/1 y por las pizzas S/2.",
     },
     servicios_adicionales: {
       caja_de_pizza: {

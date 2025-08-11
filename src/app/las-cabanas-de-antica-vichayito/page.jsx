@@ -9,9 +9,9 @@ export const metadata = {
 };
 export default function BrosFood() {
   const resto_config = {
-    name: "cabanasDeAntica",
+    name: "Las Cabañas de Antica Vichayito",
     logo: "cabanas-antica.png",
-    color: "cyan",
+    color: "#0070f3",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",
       horario_general: {
@@ -23,6 +23,12 @@ export default function BrosFood() {
         apertura: "12:00",
         cierre: "17:00",
       },
+    },
+    condiciones: {
+      postres:
+        "La disponibilidad de los postres puede variar según el stock disponible.",
+      envases:
+        "las Cabañas de Antica incluye los envases biodegradables en el precio de los platos.  ",
     },
     servicios_adicionales: {
       caja_de_pizza: {

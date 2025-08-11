@@ -50,7 +50,7 @@ const Footer = () => {
               />
             </div>
           </section>
-          <span>2024 © veryfazty.com, todos los derechos reservados.</span>
+          <span>2025 © veryfazty.com, todos los derechos reservados.</span>
         </div>
       </div>
       <section className="bg-bluefazty fixed bottom-0 z-20 flex w-full flex-row items-center justify-center text-white">

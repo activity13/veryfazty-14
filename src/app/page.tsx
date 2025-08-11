@@ -4,7 +4,6 @@ export default function Home() {
   return (
     <>
       <Promos />
-      <hr />
       <section className="container-screen my-6">
         <Partners />
       </section>

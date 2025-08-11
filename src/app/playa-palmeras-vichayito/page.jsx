@@ -10,9 +10,9 @@ export const metadata = {
 };
 export default function PlayaPlameras() {
   const resto_config = {
-    name: "hotel-playa-plameras-vichayito",
+    name: "Hotel Playa Palmeras Vichayito",
     logo: "playa-palmeras.png",
-    color: "yellow",
+    color: "#4a9a56",
     horarios: {
       publicado: "ABIERTO TODOS LOS DIAS",
       horario_general: {
@@ -24,6 +24,11 @@ export default function PlayaPlameras() {
         apertura: "-",
         cierre: "-",
       },
+    },
+    condiciones: {
+      postres:
+        "La disponibilidad de los postres puede variar según el stock disponible.",
+      envases: "Por cada plato pedido, se cobrará un envase de S/2",
     },
     servicios_adicionales: {
       eco_friendly: {
