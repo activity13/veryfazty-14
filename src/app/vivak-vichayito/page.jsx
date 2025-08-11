@@ -25,6 +25,11 @@ export default function Vivak() {
         cierre: null,
       },
     },
+    condiciones: {
+      postres:
+        "La disponibilidad de los postres puede variar según el stock disponible.",
+      envases: "Por cada plato pedido, se cobrará un envase de S/1.5.",
+    },
     servicios_adicionales: {
       caja_de_pizza: {
         value: false,
