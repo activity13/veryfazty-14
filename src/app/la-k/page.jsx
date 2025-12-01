@@ -2,10 +2,52 @@ import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
 export const metadata = {
-  title:
-    "La K Vichayito - Delivery en Vichayito y Las Pocitas: Pizzas, Pastas, Postres y Más",
+  title: "La K Vichayito | Delivery de Pizzas y Pastas en Las Pocitas",
   description:
-    "Disfruta del mejor delivery en Vichayito y Las Pocitas con La K: Pizzas artesanales, pastas frescas, hamburguesas gourmet, postres caseros, y más. Ingredientes frescos como arúgula de nuestro huerto. Haz tu pedido ahora.",
+    "¿Buscas delivery en Vichayito o Las Pocitas? La K te ofrece pizzas artesanales, pastas frescas y postres caseros. ¡Pide online ahora!",
+  keywords: [
+    "La K Vichayito",
+    "Delivery Vichayito",
+    "Delivery Las Pocitas",
+    "Pizzas Vichayito",
+    "Restaurante Italiano Mancora",
+    "Pastas frescas",
+    "Comida a domicilio playa",
+    "Postres caseros Vichayito",
+    "La K Delivery",
+    "Comida italiana Vichayito",
+    "Pizzas artesanales Mancora",
+    "Delivery rápido playa",
+    "La K pizzas y pastas",
+  ],
+  authors: [{ name: "La K Vichayito" }],
+  openGraph: {
+    title: "La K Vichayito | Tu delivery favorito en la playa",
+    description:
+      "Pizzas artesanales, pastas y postres con los mejores ingredientes. Delivery rápido a Vichayito y Las Pocitas.",
+    url: "https://veryfazty.com/la-k", // Asegúrate que esta URL sea la correcta
+    siteName: "La K Delivery",
+    images: [
+      {
+        url: "/images/pizza.jpg", // Usamos una de las imágenes que ya tienes en options
+        width: 250,
+        height: 250,
+        alt: "Pizza artesanal de La K Vichayito",
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "La K Vichayito | Delivery Express",
+    description: "Pizzas y Pastas en Vichayito y Las Pocitas. ¡Pide ahora!",
+    images: ["/images/pizzas.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 export default function LaK() {
   const resto_config = {

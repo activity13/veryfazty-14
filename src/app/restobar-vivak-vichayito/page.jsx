@@ -11,8 +11,10 @@ export const metadata = {
     "Delivery Vichayito",
     "Delivery Las Pocitas",
     "Restaurante Vichayito",
-    "Pizzas Vichayito",
-    "Hamburguesas Mancora",
+    "Alitas Vichayito",
+    "Menu Vichayito",
+    "Menu Las Pocitas",
+    "Chaufa Vichayito",
     "Pollo a la brasa",
     "Comida rapida playa",
   ],
@@ -28,13 +30,13 @@ export const metadata = {
     title: "Vivak Vichayito | Tu comida favorita en la playa",
     description:
       "¿Hambre en Vichayito o Las Pocitas? Pedir es fácil. Pizzas, Pastas y Fast Food con delivery rápido. ¡Mira nuestra carta aquí!",
-    url: "https://veryfazty.com/vivak-vichayito", // Asegúrate de poner tu dominio real
+    url: "https://veryfazty.com/restobar-vivak-vichayito", // Asegúrate de poner tu dominio real
     siteName: "Vivak Vichayito Delivery",
     images: [
       {
-        url: "/images/carta_vivak.jpg", // Usamos la imagen de la carta o una foto de comida atractiva
-        width: 1200,
-        height: 630,
+        url: "/images/wings.jpg", // Usamos la imagen de la carta o una foto de comida atractiva
+        width: 250,
+        height: 250,
         alt: "Carta y platos de Vivak Vichayito",
       },
     ],
@@ -46,7 +48,7 @@ export const metadata = {
     title: "Vivak Vichayito | Delivery Express",
     description:
       "Pizzas, Hamburguesas y más en Vichayito y Las Pocitas. ¡Pide ahora!",
-    images: ["/images/carta_vivak.jpg"], // La misma imagen optimizada
+    images: ["/images/wings.jpg"], // La misma imagen optimizada
   },
   robots: {
     index: true,
@@ -60,7 +62,7 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://veryfazty.com/vivak-vichayito",
+    canonical: "https://veryfazty.com/restobar-vivak-vichayito",
   },
 };
 export default function Vivak() {
