@@ -9,6 +9,20 @@ const Partners = () => {
       </header>
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
         <div className="flex justify-center">
+          <Link
+            href="/restobar-vivak-vichayito"
+            className="border-none bg-inherit bg-none"
+          >
+            <Image
+              className="cursor-pointer rounded-lg"
+              src="/images/vivak_logo.svg"
+              width={150}
+              height={150}
+              alt="Restobar Vivak en Vichayito, socio delivery en vichayito tienda delivery veryfazty"
+            />
+          </Link>
+        </div>
+        <div className="flex justify-center">
           <Link href="/la-k" className="border-none bg-inherit bg-none">
             <Image
               className="cursor-pointer rounded-lg"
