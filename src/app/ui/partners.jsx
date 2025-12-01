@@ -8,10 +8,10 @@ const Partners = () => {
         <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
-        <div className="flex justify-center">
+        <div className="flex justify-center align-middle">
           <Link
             href="/restobar-vivak-vichayito"
-            className="border-none bg-inherit bg-none"
+            className="flex border-none bg-inherit bg-none align-middle"
           >
             <Image
               className="cursor-pointer rounded-lg"
