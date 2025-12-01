@@ -7,10 +7,13 @@ export const metadata = {
     "¿Buscas delivery en Vichayito o Las Pocitas? La K te ofrece pizzas artesanales, pastas frescas y postres caseros. ¡Pide online ahora!",
   keywords: [
     "La K Vichayito",
+    "Sandwiches Vichayito",
+    "Hamburguesas Vichayito",
+    "Pollo al cilantro Vichayito",
     "Delivery Vichayito",
     "Delivery Las Pocitas",
     "Pizzas Vichayito",
-    "Restaurante Italiano Mancora",
+    "Restaurante Italiano Vichayito",
     "Pastas frescas",
     "Comida a domicilio playa",
     "Postres caseros Vichayito",
@@ -29,7 +32,7 @@ export const metadata = {
     siteName: "La K Delivery",
     images: [
       {
-        url: "/images/pizza.jpg", // Usamos una de las imágenes que ya tienes en options
+        url: "/images/la-k_seo.png", // Usamos una de las imágenes que ya tienes en options
         width: 250,
         height: 250,
         alt: "Pizza artesanal de La K Vichayito",
@@ -42,7 +45,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "La K Vichayito | Delivery Express",
     description: "Pizzas y Pastas en Vichayito y Las Pocitas. ¡Pide ahora!",
-    images: ["/images/pizzas.jpg"],
+    images: ["/images/la-k_seo.png"],
   },
   robots: {
     index: true,

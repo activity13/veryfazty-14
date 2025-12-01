@@ -1,16 +1,54 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
-import { Suspense } from "react";
+
 export const metadata = {
-  title:
-    "La K Vichayito - Delivery en Vichayito y Las Pocitas: Pizzas, Pastas, Postres y Más",
+  title: "Playa Palmeras | Delivery de Comida Marina y Nikkei en Vichayito",
   description:
-    "Disfruta del mejor delivery en Vichayito y Las Pocitas con La K: Pizzas artesanales, pastas frescas, hamburguesas gourmet, postres caseros, y más. Ingredientes frescos como arúgula de nuestro huerto. Haz tu pedido ahora.",
+    "¿Antojo de mariscos? Playa Palmeras te lleva lo mejor del mar a tu casa en Vichayito y Las Pocitas. Ceviches, Causa Nikkei y platos gourmet. ¡Viernes exclusivos de Chifa!",
+  keywords: [
+    "Playa Palmeras Delivery",
+    "Comida Marina Vichayito",
+    "Delivery Las Pocitas",
+    "Causa Nikkei",
+    "Ceviche a domicilio",
+    "Chifa Vichayito",
+    "Pescados y Mariscos Vichayito",
+  ],
+  authors: [{ name: "Playa Palmeras" }],
+  openGraph: {
+    title: "Playa Palmeras | Lo mejor del mar en tu mesa",
+    description:
+      "Delivery de pescados, mariscos y fusión Nikkei en Vichayito. Disfruta de nuestra famosa Causa Nikkei y Tiraditos. ¡Viernes Noche de Chifa!",
+    url: "https://veryfazty.com/playa-palmeras-vichayito",
+    siteName: "Playa Palmeras Delivery",
+    images: [
+      {
+        url: "/images/playa_palmeras_Seo.jpeg", // Usamos una imagen atractiva de comida
+        width: 828,
+        height: 828,
+        alt: "Ceviches y Causa Nikkei Playa Palmeras",
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Playa Palmeras | Delivery Marino & Nikkei",
+    description:
+      "Ceviches, Causa Nikkei y Especiales marinos en Vichayito. Viernes: Noche de Chifa.",
+    images: ["/images/playa_palmeras_Seo.jpeg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
+
 export default function PlayaPlameras() {
   const resto_config = {
-    name: "Hotel Playa Palmeras Vichayito",
+    name: "Playa Palmeras Delivery", // Ajustado para enfocar en delivery
     logo: "playa-palmeras.png",
     color: "#4a9a56",
     horarios: {
@@ -20,9 +58,9 @@ export default function PlayaPlameras() {
         cierre: "21:00 hrs.",
       },
       horario_parcial: {
-        carta: "no disponible",
-        apertura: "-",
-        cierre: "-",
+        carta: "Viernes de Chifa", // Destacado en el horario
+        apertura: "19:00",
+        cierre: "22:00",
       },
     },
     condiciones: {
@@ -53,10 +91,12 @@ export default function PlayaPlameras() {
     Postres: "postres-playa-palmeras.jpg",
     Bebidas: "bebidas-playa-palmeras.jpg",
   };
+
+  // Textos actualizados para reflejar el enfoque en comida marina y delivery
   const alt =
-    "Hotel Playa palmeras Vichayito delivery las pocitas. Noche de chifa, pescados, mariscos y más en Vichayito y Las Pocitas, delivery veryfazty";
+    "Playa Palmeras Delivery Vichayito. Especialidad en Causa Nikkei, Ceviches, Tiraditos y comida marina fresca. Viernes noche de Chifa.";
   const description =
-    "El Hotel Playa Palmeras ofrece una deliciosa carta de chifa, pescados, mariscos y más. Disfruta de una experiencia gastronómica única en Vichayito y Las Pocitas con nuestro servicio de delivery veryfazty.";
+    "Playa Palmeras lleva la experiencia gourmet a tu puerta. Especialistas en cocina marina y fusión: desde una Causa Nikkei hasta pescados frescos del día. Nota: Nuestra carta de Chifa está disponible exclusivamente los viernes por la noche.";
 
   return (
     <div className="min-h-screen">
