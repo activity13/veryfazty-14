@@ -3,10 +3,65 @@ import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
 import Image from "next/image";
 export const metadata = {
-  title:
-    "Vivak Vichayito - Delivery en Vichayito y Las Pocitas: Pizzas, Pastas, Postres y Más",
+  title: "Vivak Vichayito | Delivery & Restobar en Vichayito y Las Pocitas",
   description:
-    "Disfruta del mejor delivery en Vichayito y Las Pocitas con vivak Vichayito, La terracita fast food. Ofrecemos una variedad de deliciosos sandwiches, hamburguesas, pollo a la brasa, borster y más. Haz tu pedido ahora y disfruta de una experiencia gastronómica única en la playa.",
+    "El mejor delivery en Vichayito y Las Pocitas. Disfruta de pizzas artesanales, hamburguesas gourmet, pollos a la brasa y pastas frente al mar. ¡Pide online en Vivak!",
+  keywords: [
+    "Vivak Vichayito",
+    "Delivery Vichayito",
+    "Delivery Las Pocitas",
+    "Restaurante Vichayito",
+    "Pizzas Vichayito",
+    "Hamburguesas Mancora",
+    "Pollo a la brasa",
+    "Comida rapida playa",
+  ],
+  authors: [{ name: "Vivak Restobar" }],
+  creator: "Viw App",
+  publisher: "Viw App",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Vivak Vichayito | Tu comida favorita en la playa",
+    description:
+      "¿Hambre en Vichayito o Las Pocitas? Pedir es fácil. Pizzas, Pastas y Fast Food con delivery rápido. ¡Mira nuestra carta aquí!",
+    url: "https://veryfazty.com/vivak-vichayito", // Asegúrate de poner tu dominio real
+    siteName: "Vivak Vichayito Delivery",
+    images: [
+      {
+        url: "/images/carta_vivak.jpg", // Usamos la imagen de la carta o una foto de comida atractiva
+        width: 1200,
+        height: 630,
+        alt: "Carta y platos de Vivak Vichayito",
+      },
+    ],
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vivak Vichayito | Delivery Express",
+    description:
+      "Pizzas, Hamburguesas y más en Vichayito y Las Pocitas. ¡Pide ahora!",
+    images: ["/images/carta_vivak.jpg"], // La misma imagen optimizada
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://veryfazty.com/vivak-vichayito",
+  },
 };
 export default function Vivak() {
   const resto_config = {
