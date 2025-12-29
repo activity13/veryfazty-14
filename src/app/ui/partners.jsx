@@ -8,7 +8,7 @@ const Partners = () => {
         <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
-        <div className="flex justify-center align-middle">
+        {/* <div className="flex justify-center align-middle">
           <Link
             href="/el-market-vichayito"
             className="flex border-none bg-inherit bg-none align-middle"
@@ -21,18 +21,18 @@ const Partners = () => {
               alt="El Market, socio delivery en vichayito tienda delivery veryfazty"
             />
           </Link>
-        </div>
+        </div> */}
         <div className="flex justify-center align-middle">
           <Link
-            href="/restobar-vivak-vichayito"
+            href="/restobar-suylu-vichayito"
             className="flex border-none bg-inherit bg-none align-middle"
           >
             <Image
               className="cursor-pointer rounded-lg"
-              src="/images/vivak_logo.svg"
+              src="/images/suylu.svg"
               width={150}
               height={150}
-              alt="Restobar Vivak en Vichayito, socio delivery en vichayito tienda delivery veryfazty"
+              alt="Restobar Suylu en Vichayito, socio delivery en vichayito tienda delivery veryfazty"
             />
           </Link>
         </div>

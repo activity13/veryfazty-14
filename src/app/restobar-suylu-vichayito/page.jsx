@@ -1,13 +1,12 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
-import Image from "next/image";
 export const metadata = {
-  title: "Vivak Vichayito | Delivery & Restobar en Vichayito y Las Pocitas",
+  title: "Suylu Vichayito | Delivery & Restobar en Vichayito y Las Pocitas",
   description:
-    "El mejor delivery en Vichayito y Las Pocitas. Disfruta de pizzas artesanales, hamburguesas gourmet, pollos a la brasa y pastas frente al mar. ¡Pide online en Vivak!",
+    "El mejor delivery en Vichayito y Las Pocitas. Disfruta de pizzas artesanales, hamburguesas gourmet, pollos a la brasa y pastas frente al mar. ¡Pide online en Suylu!",
   keywords: [
-    "Vivak Vichayito",
+    "Suylu Vichayito",
     "Delivery Vichayito",
     "Delivery Las Pocitas",
     "Restaurante Vichayito",
@@ -18,7 +17,7 @@ export const metadata = {
     "Pollo a la brasa",
     "Comida rapida playa",
   ],
-  authors: [{ name: "Vivak Restobar" }],
+  authors: [{ name: "Suylu Restobar" }],
   creator: "Viw App",
   publisher: "Viw App",
   formatDetection: {
@@ -27,17 +26,17 @@ export const metadata = {
     telephone: false,
   },
   openGraph: {
-    title: "Vivak Vichayito | Tu comida favorita en la playa",
+    title: "Suylu Vichayito | Tu comida favorita en la playa",
     description:
       "¿Hambre en Vichayito o Las Pocitas? Pedir es fácil. Pizzas, Pastas y Fast Food con delivery rápido. ¡Mira nuestra carta aquí!",
-    url: "https://veryfazty.com/restobar-vivak-vichayito", // Asegúrate de poner tu dominio real
-    siteName: "Vivak Vichayito Delivery",
+    url: "https://veryfazty.com/restobar-suylu-vichayito", // Asegúrate de poner tu dominio real
+    siteName: "Suylu Vichayito Delivery",
     images: [
       {
         url: "/images/wings.jpg", // Usamos la imagen de la carta o una foto de comida atractiva
         width: 250,
         height: 250,
-        alt: "Carta y platos de Vivak Vichayito",
+        alt: "Carta y platos de Suylu Vichayito",
       },
     ],
     locale: "es_PE",
@@ -45,7 +44,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vivak Vichayito | Delivery Express",
+    title: "Suylu Vichayito | Delivery Express",
     description:
       "Pizzas, Hamburguesas y más en Vichayito y Las Pocitas. ¡Pide ahora!",
     images: ["/images/wings.jpg"], // La misma imagen optimizada
@@ -62,13 +61,13 @@ export const metadata = {
     },
   },
   alternates: {
-    canonical: "https://veryfazty.com/restobar-vivak-vichayito",
+    canonical: "https://veryfazty.com/restobar-suylu-vichayito",
   },
 };
-export default function Vivak() {
+export default function Suylu() {
   const resto_config = {
-    name: "Restobar Vivak Vichayito",
-    logo: "vivak_logo.svg",
+    name: "Restobar Suylu Vichayito",
+    logo: "suylu.svg",
     color: "white",
     horarios: {
       publicado: "REPARTOS DE 1 A 10 PM, ABIERTO TODOS LOS DÍAS",
@@ -104,14 +103,14 @@ export default function Vivak() {
   };
 
   const options = {
-    Menú: "menu_vivak.jpg",
-    Alitas: "alitas_vivak.jpg",
-    Carta: "carta_vivak.jpg",
+    // Menú: "suylu_menu.jpg",
+    "PARRILLAS, POLLO A LA BRASA Y BEBIDAS": "suylu_carta1.jpg",
+    CARTA: "suylu_carta2.jpg",
   };
   const alt =
-    "Carta del menú de Restobar Vivak mostrando variedad de platos como alitas, carnes, pizzas y especiales con precios en soles.";
+    "Carta de Restobar Suylu mostrando variedad de platos como alitas, carnes, pizzas y especiales con precios en soles.";
   const description =
-    "🍕 Vivak Vichayito - El mejor delivery en Vichayito y Las Pocitas ⭐ Disfruta alitas BBQ, pizzas artesanales, carnes a la parrilla, pollo a la brasa jugoso, hamburguesas gourmet y postres caseros. Delivery rápido 1-10 PM todos los días. ¡Ordena ahora y vive la mejor experiencia gastronómica frente al mar! 🌊 Calidad premium, precios justos, sabor único en la costa norte del Perú.";
+    "🍕 Suylu Vichayito - El mejor delivery en Vichayito y Las Pocitas ⭐ Disfruta alitas BBQ, pizzas artesanales, carnes a la parrilla, pollo a la brasa jugoso, hamburguesas gourmet y postres caseros. Delivery rápido 1-10 PM todos los días. ¡Ordena ahora y vive la mejor experiencia gastronómica frente al mar! 🌊 Calidad premium, precios justos, sabor único en la costa norte del Perú.";
 
   return (
     <div className="min-h-screen">
