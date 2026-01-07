@@ -17,7 +17,7 @@ export default function MarketVichayito() {
       )}
 
       <iframe
-        src="https://market-embed-vichayito.viw-carta.com"
+        src="http://market-embed-vichayito.localhost:3000/"
         title="Menú de Vichayito"
         className="block h-full w-full"
         style={{ border: "none", display: "block" }}
