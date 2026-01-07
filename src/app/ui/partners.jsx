@@ -8,20 +8,20 @@ const Partners = () => {
         <h2 className="text-6xl font-bold">DELIVERY</h2>
       </header>
       <div className="mt-10 grid grid-cols-2 place-content-between justify-center gap-4 text-center sm:grid-cols-2 md:grid-cols-3">
-        {/* <div className="flex justify-center align-middle">
+        <div className="flex justify-center align-middle">
           <Link
-            href="/el-market-vichayito"
+            href="/fast-market"
             className="flex border-none bg-inherit bg-none align-middle"
           >
             <Image
               className="cursor-pointer rounded-lg"
-              src="/images/el-market-logo.png"
+              src="/images/fast-market-logo.jpeg"
               width={150}
               height={150}
-              alt="El Market, socio delivery en vichayito tienda delivery veryfazty"
+              alt="Fast Market, socio delivery en vichayito tienda delivery veryfazty"
             />
           </Link>
-        </div> */}
+        </div>
         <div className="flex justify-center align-middle">
           <Link
             href="/restobar-suylu-vichayito"
