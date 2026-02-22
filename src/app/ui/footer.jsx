@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="relative z-30">
         <div className="container-fluid bg-bluefazty py-4 text-center text-white">
           <h3>HAZ TU PEDIDO</h3>
-          <h4>ESCRIBE o LLAMA</h4>
+          <h4>ESCRÍBENOS</h4>
           <div className="mb-1 ml-2 mt-1 flex h-auto w-auto justify-center">
             <Image
               src="/images/whatsapp_solid.png"
