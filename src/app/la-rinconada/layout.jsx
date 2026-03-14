@@ -79,7 +79,7 @@ export default function LaRinconadaLayout({ children }) {
     <div className="fixed inset-0 z-[9999] h-[100dvh] w-full scrollbar-none bg-white">
       <div className="mx-auto h-full max-w-7xl">{children}</div>
       {/* Botón flotante dedicado: Volver a Veryfazty */}
-      <div className="pointer-events-none absolute bottom-20 right-0 left-0 z-50 flex justify-center">
+      <div className="pointer-events-none absolute bottom-20 right-0 z-0 flex justify-end">
         <Link
           href="/"
           className="pointer-events-auto flex items-center justify-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-3 text-lg font-bold text-blue-500 shadow-md transition-all hover:bg-blue-50 active:scale-95"
