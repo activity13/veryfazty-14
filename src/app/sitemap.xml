@@ -11,6 +11,7 @@
     <priority>0.80</priority>
   </url>
   <url>
+  
     <loc>https://veryfazty.com/brosfood</loc>
     <lastmod>2025-12-25</lastmod>
     <priority>0.80</priority>
@@ -49,5 +50,15 @@
     <loc>https://veryfazty.com/restobar-suylu-vichayito</loc>
     <lastmod>2025-12-25</lastmod>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://veryfazty.com/la-rinconada</loc>
+    <lastmod>2026-03-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://veryfazty.com/llms.txt</loc>
+    <lastmod>2026-03-14</lastmod>
+    <priority>0.90</priority>
   </url>
 </urlset>

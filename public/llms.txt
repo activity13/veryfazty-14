@@ -1,0 +1,31 @@
+# Veryfazty - Delivery App Ecosystem
+
+> Veryfazty es una web app que brinda una gran experiencia de uso a los clientes, ofreciéndoles los mejores restaurantes a zona de reparto de todo Vichayito y Las Pocitas. 
+
+## About Veryfazty
+Veryfazty is a premium, elegant, and fast food delivery application serving the beach areas of northern Peru. Our core philosophy is represented by the simplicity and elegance of white space that houses a small universe of restaurants. We aim to foster competition, good service, and the agility to organize orders so they are delivered as quickly as possible—and above all, hot. 
+
+Our mission is to automatically and systematically offer smart food recommendations based on customer tastes and preferences.
+
+## Service Area
+- Vichayito
+- Las Pocitas
+- Los Órganos
+- Máncora
+
+## Key Features
+- **Fast Delivery:** Prioritizes hot, fresh food delivered in record time.
+- **Smart Recommendations:** Provides personalized restaurant recommendations based on AI and customer preferences.
+- **Premium UX/UI:** Uses a distinct "White and Light Blue" aesthetic that emphasizes elegance and ease of use.
+
+## Partner Restaurants & Availability 
+Some of our top affiliated restaurants on the platform include, but are not limited to:
+- **La Rinconada:** Premium meats, imported cuts, Wagyu, Angus, Duroc pork. 
+- **Restobar Suylu:** Seafood, Ceviche, grilled chicken (Pollo a la brasa), desserts.
+- **La K:** Pizzas, Burgers, Pastas, Sandwiches, Ceviche.
+- **Playa Palmeras:** Seafood, Ceviche, Desserts, Salads.
+- **Las Cabañas de Antica:** Pizzas, pastas, grilled meats, seafood.
+
+## Contact Information
+- **Phone / WhatsApp Delivery:** +51 924 380 097
+- **Main Website:** https://veryfazty.com
