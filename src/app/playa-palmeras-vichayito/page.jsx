@@ -106,8 +106,11 @@ export default function PlayaPlameras() {
   const description =
     "Playa Palmeras lleva la experiencia gourmet a tu puerta. Especialistas en cocina marina y fusión: desde una Causa Nikkei hasta pescados frescos del día. Nota: Nuestra carta de Chifa está disponible exclusivamente los viernes por la noche.";
 
-  // Disclaimer opcional
-  const disclaimer = "Carta disponible solo los viernes a partir de las 7pm.";
+  // Disclaimer opcional por carta
+  const disclaimers = {
+    Chifa: "Carta disponible solo los viernes a partir de las 7pm.",
+    // Cena: "Disponible a partir de las 7pm.", // Ejemplo para otra carta
+  };
 
   return (
     <div className="min-h-screen">
@@ -116,7 +119,7 @@ export default function PlayaPlameras() {
         options={options}
         alt={alt}
         description={description}
-        disclaimer={disclaimer}
+        disclaimer={disclaimers}
       />
       <BackArrow />
     </div>

@@ -104,13 +104,24 @@ function RestaurantCardContent({ options, alt, description, disclaimer }) {
       </div>
 
       {/* Disclaimer Opcional */}
-      {disclaimer && (
-        <div className="mt-2 flex justify-center px-4">
-          <p className="max-w-md text-center text-2xl font-bold italic text-gray-500">
-            {disclaimer}
-          </p>
-        </div>
-      )}
+      {(() => {
+        const currentDisclaimer =
+          typeof disclaimer === "object" && disclaimer !== null
+            ? activeMenu
+              ? disclaimer[activeMenu]
+              : null
+            : disclaimer;
+
+        if (!currentDisclaimer) return null;
+
+        return (
+          <div className="mt-2 flex justify-center px-4">
+            <p className="max-w-md text-center text-xl font-bold italic text-gray-500">
+              {currentDisclaimer}
+            </p>
+          </div>
+        );
+      })()}
 
       {/* Contenedor de la Imagen */}
       <div className="flex justify-center">
