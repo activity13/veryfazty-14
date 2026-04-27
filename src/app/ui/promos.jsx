@@ -15,7 +15,7 @@ const PROMOS_DATA = [
     type: "internal",
     whatsappNumber: "",
     whatsappMessage: "",
-    internalLink: "/playa-palmeras-vichayito",
+    internalLink: "/playa-palmeras-vichayito?carta=Chifa",
     alt: "En Playa Palmeras los viernes son de chifa.",
   },
   {

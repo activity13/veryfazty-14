@@ -1,10 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import ImageWithLoader from "./ImageWithLoader";
 
-export default function RestaurantCard({ options, alt, description }) {
+function RestaurantCardContent({ options, alt, description, disclaimer }) {
   // Determinamos si las opciones tienen un nivel extra de anidación
   const isNested = useMemo(() => {
     if (!options || Object.keys(options).length === 0) return false;
@@ -16,10 +17,23 @@ export default function RestaurantCard({ options, alt, description }) {
     [isNested, options],
   );
 
+  const searchParams = useSearchParams();
+  const queryCarta = searchParams.get("carta");
+
   // Estado para el menú principal (Almuerzo, Cena, etc)
-  const [activeMenu, setActiveMenu] = useState(() =>
-    isNested ? mainMenus[0] : null,
-  );
+  const [activeMenu, setActiveMenu] = useState(() => {
+    if (!isNested) return null;
+    if (queryCarta && mainMenus.includes(queryCarta)) return queryCarta;
+    return mainMenus[0];
+  });
+
+  // Si el parametro URL cambia por navegación, actualizamos
+  useEffect(() => {
+    if (isNested && queryCarta && mainMenus.includes(queryCarta)) {
+      setActiveMenu(queryCarta);
+    }
+  }, [queryCarta, isNested, mainMenus]);
+
   // Estado para la subcategoría seleccionada
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -89,6 +103,15 @@ export default function RestaurantCard({ options, alt, description }) {
         </div>
       </div>
 
+      {/* Disclaimer Opcional */}
+      {disclaimer && (
+        <div className="mt-2 flex justify-center px-4">
+          <p className="max-w-md text-center text-2xl font-bold italic text-gray-500">
+            {disclaimer}
+          </p>
+        </div>
+      )}
+
       {/* Contenedor de la Imagen */}
       <div className="flex justify-center">
         <div className="m-3 max-w-[335px] sm:max-w-xl">
@@ -98,5 +121,17 @@ export default function RestaurantCard({ options, alt, description }) {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function RestaurantCard(props) {
+  return (
+    <Suspense
+      fallback={
+        <div className="py-4 text-center text-gray-500">Cargando menú...</div>
+      }
+    >
+      <RestaurantCardContent {...props} />
+    </Suspense>
   );
 }
