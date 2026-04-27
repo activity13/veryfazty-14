@@ -5,38 +5,68 @@ import tableStand from "../../../public/images/table_small.png";
 import Slider from "./linkeableSlider";
 import { useState, useEffect } from "react";
 
-export const MobilePromos = (imageNames) => {
+// Configuración de los banners de promociones
+// Se definen los tipos: "whatsapp" (externo) o "internal" (redirección a página)
+const PROMOS_DATA = [
+  {
+    id: "viernes-de-chifa-playa-palmeras",
+    desktopImage: "banner_pp_chifa_d.webp",
+    mobileImage: "banner_pp_chifa.webp",
+    type: "internal",
+    whatsappNumber: "",
+    whatsappMessage: "",
+    internalLink: "/playa-palmeras-vichayito",
+    alt: "En Playa Palmeras los viernes son de chifa.",
+  },
+  {
+    id: "promo-bros-1",
+    desktopImage: "promo-bros.png",
+    mobileImage: "brosPromoMobile.jpg",
+    type: "whatsapp",
+    whatsappNumber: "51924380097",
+    whatsappMessage:
+      "Hola Veryfazty, me gustaría ordenar la promo de Bros Food: 2 Pizzas (Pepperoni + Americana o Caprese) por S/47.",
+    internalLink: "",
+    alt: "Promo de Pizzas Bros",
+  },
+  {
+    id: "promo-bros-2",
+    desktopImage: "promo-bros-2.png",
+    mobileImage: "brosPromoMobile2.jpg",
+    type: "whatsapp",
+    whatsappNumber: "51924380097",
+    whatsappMessage:
+      "Hola Veryfazty, me gustaría ordenar la promo de Bros Food: 2 Hamburguesas clásicas por S/33.",
+    internalLink: "",
+    alt: "Conoce más de Brosfood",
+  },
+];
+
+export const MobilePromos = ({ promos }) => {
   return (
-    <div
-      className=" mt-5 
-          pb-10 pt-2 text-center md:h-[50vh] md:pb-0"
-    >
-      <div className="flex h-full items-center  justify-center md:mt-[-30px]">
-        <div className="max-w-[80%] rounded-lg ">
-          <div className="max-w-sm">
-            <Slider
-              alt="veryfazty table presents offers"
-              imageNames={imageNames.imageNames}
-              className="absolute flex justify-center rounded"
-            />
-          </div>
+    <div className="mb-4 mt-6 px-4 text-center">
+      <div className="flex justify-center">
+        <div className="w-full max-w-[320px]">
+          <Slider promos={promos} isMobile={true} />
         </div>
       </div>
     </div>
   );
 };
 
-export const DesktopPromos = (imageNames) => {
+export const DesktopPromos = ({ promos }) => {
   return (
-    <div className="relative flex h-full items-center justify-center">
-      <div className="max-w-sm">
-        <Slider imageNames={imageNames.imageNames} />
+    <div className="relative mb-6 mt-8 flex flex-col items-center justify-center">
+      <div className="relative z-10 w-full max-w-[340px]">
+        <Slider promos={promos} isMobile={false} />
+      </div>
+      <div className="z-0 -mt-24 flex w-full select-none justify-center opacity-90 transition-opacity duration-300">
         <Image
           src={tableStand}
           height={116}
           width={416}
-          alt="veryfazty table presents offers"
-          className=" -z-50 -mt-24 select-none" // Ajuste de margen para posicionar la imagen correctamente
+          alt="Stand Veryfazty"
+          className="object-contain"
         />
       </div>
     </div>
@@ -44,37 +74,41 @@ export const DesktopPromos = (imageNames) => {
 };
 
 export default function Promos() {
-  const desktopImageNames = ["promo-bros.png", "promo-bros-2.png"];
-  const mobileImageNames = ["brosPromoMobile.jpg", "brosPromoMobile2.jpg"];
-
   const [isMobile, setIsMobile] = useState(true);
-  const [imageNames, setImageNames] = useState(mobileImageNames);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleResize = () => {
-      const isMobileView = window.innerWidth <= 766.39;
-      setIsMobile(isMobileView);
-      setImageNames(isMobileView ? mobileImageNames : desktopImageNames);
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    // Add resize listener
+    handleResize(); // Validación inicial
+
     window.addEventListener("resize", handleResize);
-
-    // Cleanup on unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  return (
-    <div className="text-center">
-      <h1 className="text-3xl lg:text-4xl">PROMOCIONES</h1>
+  // Evitar desajustes de hidratación en Next.js (Hydration Mismatch)
+  if (!mounted) return null;
 
-      {isMobile ? (
-        <MobilePromos imageNames={imageNames} />
-      ) : (
-        <DesktopPromos imageNames={imageNames} />
-      )}
-    </div>
+  return (
+    <section className="flex flex-col items-center pb-4 pt-8">
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl font-black tracking-tight text-gray-900 md:text-4xl">
+          Recomendado para ti
+        </h2>
+        {/* Acento celeste característico de Veryfazty */}
+        <div className="mx-auto mt-3 h-1.5 w-16 rounded-full bg-[#38bdf8]"></div>
+      </div>
+
+      <div className="w-full">
+        {isMobile ? (
+          <MobilePromos promos={PROMOS_DATA} />
+        ) : (
+          <DesktopPromos promos={PROMOS_DATA} />
+        )}
+      </div>
+    </section>
   );
 }

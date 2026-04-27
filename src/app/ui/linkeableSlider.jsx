@@ -1,46 +1,76 @@
 "use client";
-import React, { Component, useEffect } from "react";
+
+import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export default class SimpleSlider extends Component {
-  render() {
-    const { imageNames } = this.props;
-    const settings = {
-      dots: true,
-      infinite: true,
-      speed: 600,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      autoplay: true,
-      autoplaySpeed: 12000,
-      cssEase: "linear",
-    };
+export default function SimpleSlider({ promos, isMobile }) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: "ease-in-out",
+  };
 
-    return (
+  return (
+    <div className="w-full pb-8">
       <Slider {...settings}>
-        {imageNames.map((image, index) => (
-          <div key={index} className="h-full w-[90%] rounded">
-            <a
-              href={"https://wa.me/51924380097"}
-              target="_blank"
-              rel="noreferrer"
-            >
+        {promos.map((promo) => {
+          // Seleccionar la imagen dependiendo del dispositivo
+          const imageSrc = isMobile ? promo.mobileImage : promo.desktopImage;
+
+          // Definir hacia dónde redirige
+          const href =
+            promo.type === "whatsapp"
+              ? `https://wa.me/${promo.whatsappNumber}?text=${encodeURIComponent(promo.whatsappMessage)}`
+              : promo.internalLink;
+
+          const isExternal = promo.type === "whatsapp";
+
+          const ImageComponent = (
+            <div className="relative cursor-pointer overflow-hidden rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_30px_rgb(56,189,248,0.3)]">
               <Image
-                src={`/images/${image}`}
-                height={1000}
-                width={1000}
-                alt={`Image ${index + 1}`}
+                src={`/images/${imageSrc}`}
+                height={800}
+                width={800}
+                alt={promo.alt}
                 priority
-                className="rounded"
+                className="h-auto w-full rounded-[20px] object-cover"
               />
-            </a>
-          </div>
-        ))}
+            </div>
+          );
+
+          return (
+            <div
+              key={promo.id}
+              className="rounded-xl px-1 pb-4 pt-2 outline-none"
+            >
+              {isExternal ? (
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block outline-none"
+                >
+                  {ImageComponent}
+                </a>
+              ) : (
+                <Link href={href} className="block outline-none">
+                  {ImageComponent}
+                </Link>
+              )}
+            </div>
+          );
+        })}
       </Slider>
-    );
-  }
+    </div>
+  );
 }

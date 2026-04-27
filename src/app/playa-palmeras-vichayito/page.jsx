@@ -81,15 +81,23 @@ export default function PlayaPlameras() {
   };
 
   const options = {
-    Carta: "playa-palmeras-carta.jpg",
-    Entradas: "entradas-playa-palmeras.jpg",
-    CevichesTiraditos: "ceviches-tiraditos-playa-palmeras.jpg",
-    Fondos: "fondos-playa-palmeras.jpg",
-    Especiales: "especiales-playa-palmeras.jpg",
-    Sopas: "sopas-playa-palmeras.jpg",
-    Ensaladas: "ensaladas-playa-palmeras.jpg",
-    Postres: "postres-playa-palmeras.jpg",
-    Bebidas: "bebidas-playa-palmeras.jpg",
+    Almuerzo: {
+      Carta: "playa-palmeras-carta.jpg",
+      Entradas: "entradas-playa-palmeras.jpg",
+      "Ceviches & Tiraditos": "ceviches-tiraditos-playa-palmeras.jpg",
+      Fondos: "fondos-playa-palmeras.jpg",
+      Especiales: "especiales-playa-palmeras.jpg",
+      Sopas: "sopas-playa-palmeras.jpg",
+      Ensaladas: "ensaladas-playa-palmeras.jpg",
+      Postres: "postres-playa-palmeras.jpg",
+      Bebidas: "bebidas-playa-palmeras.jpg",
+    },
+    Cena: {
+      Carta: "carta_noche.webp", // Puedes cambiar esta imagen por la de cena
+    },
+    Chifa: {
+      Carta: "chifa-abril-26.webp", // Puedes cambiar esta imagen por la carta de chifa
+    },
   };
 
   // Textos actualizados para reflejar el enfoque en comida marina y delivery
