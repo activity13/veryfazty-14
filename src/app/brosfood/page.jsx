@@ -85,7 +85,7 @@ export default function BrosFood() {
   };
 
   const options = {
-    Carta: "2024_carta_sin_logo.jpg",
+    Carta: "bros-food-last-menu.jpg",
   };
 
   const alt =
