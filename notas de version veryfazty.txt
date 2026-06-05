@@ -1,0 +1,24 @@
+- Cambio de nombe de imageSlider a imageSquareSlider
+- agregué un midlleware que intercepta el subdominio y redirige a la ruta /cartas en caso se acceda al mismo.
+- relacionado con el punto anterior también generpe el archivo vercel.json con el objetivo de centralizar ña configuración de las rutas de vercel.
+ 
+
+Okay, vamos con varios puntos.
+
+1. El problema que te mandé se resuelve de la siguiente manera: 
+export async function GET(
+  request: NextRequest,
+
+  { params }: { params: Promise<{ id: string }> }
+) {/*resto del codigo*/} 
+
+Puedes tomarlo y guardarlo para que puedas ayudar a más personas en caso tengan el mismo problema, yo lo saqué de un hilo de reddit.
+
+2. Si, me gustaría que que ocurriece que al momento de generar el codigo qr, este se pueda descargar. 
+
+3. Genera el frontend para la generación del qr, me imagino algo como: en la pagina del perfil del negocio (que es sobre la cuál hemos estado trabajando) se aimporte el botoón de generación que invoque la llamada api de generación. Puesto que, previamente, ya tendría que exitir el marco qr, pero al mismo tiempo la generación manipula la carpeta /public, la cuál ya hemos dicho que por ahora no vamos a poder subir nada por falta de un soporte de almacenamiento funcional en vercel, entonces sería un proceso que me encargaría de hacer yo mismo en la instalación de mis primeros clientes, sin embargo si deberían poder descargarlo para que lo impriman y distribuyan, en ese sentido, propón un sistem de botón de descarga que podria ir tal vez integraqdo en el componente de generación del qr o si tienes una mejor idea puedes pro supuesto presentarla.   
+
+-----------------------------------------------------------------
+
+
+Previamente ya teniamos ese generado en el backend (el cuál pasé líneas arriba), el cuál exitosamente, genera el qr y lo guarda en public, lo cuál es corecto para el funcionamiento requerido. Me gustaria que mantengas esa lógica. La idea sería implementar el sistema para que, con el qr existente se pueda servir de este para poder descargarlo sin generarse nuevamente cada vez que se quiera descargar. 
