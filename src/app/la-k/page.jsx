@@ -17,7 +17,7 @@ export default function LaK() {
       )}
 
       <iframe
-        src="https://la-k.viw-carta.com"
+        src="https://la-k.viw-carta.com/?embed=true&phone=51924380097"
         title="La K - Carta Digital"
         className="block h-full w-full"
         style={{ border: "none", display: "block" }}
