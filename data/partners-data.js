@@ -18,15 +18,15 @@ export const CATEGORIES = [
 ];
 
 export const PARTNERS_DATA = [
-  // {
-  //   id: "la-rinconada",
-  //   name: "La Rinconada",
-  //   href: "/la-rinconada",
-  //   image: "/images/larinconada.jpeg", // Temporary placeholder
-  //   categories: ["Parrilla", "Carnes, embutidos y más"],
-  //   alt: "La Rinconada socio delivery en tienda web delivery veryfazty vichayito",
-  //   active: true,
-  // },
+  {
+    id: "la-rinconada",
+    name: "La Rinconada",
+    href: "/la-rinconada",
+    image: "/images/larinconada.jpeg", // Temporary placeholder
+    categories: ["Parrilla", "Carnes, embutidos y más"],
+    alt: "La Rinconada socio delivery en tienda web delivery veryfazty vichayito",
+    active: true,
+  },
 
   {
     id: "la-k",
