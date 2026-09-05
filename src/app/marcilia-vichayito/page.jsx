@@ -1,6 +1,7 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 export const metadata = {
   title:
     "Marcilia Vichayito - Delivery en Vichayito y Las Pocitas: Menu, Carta marina, Postres, Sandwich y mucho más.",
@@ -57,6 +58,11 @@ export default function BrosFood() {
 
   return (
     <div className="min-h-screen">
+      <RestaurantViewTracker
+        restaurantSlug="marcilia-vichayito"
+        restaurantName="Marcilia Vichayito"
+        category="Menú & Pizzas"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />

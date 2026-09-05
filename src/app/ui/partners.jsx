@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { CATEGORIES, PARTNERS_DATA } from "../../../data/partners-data";
+import { trackEvent } from "@/src/lib/analytics";
 
 const Partners = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -25,6 +26,7 @@ const Partners = () => {
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
     setHasInteracted(true);
+    trackEvent("category_filter", { category });
   };
 
   const filteredPartners = activeCategory === "Todos"
@@ -46,7 +48,10 @@ const Partners = () => {
       <div className="relative min-h-[120px] mb-12 flex flex-col items-center justify-center">
         {!hasInteracted ? (
           <button
-            onClick={() => setHasInteracted(true)}
+            onClick={() => {
+              setHasInteracted(true);
+              trackEvent("category_filter", { category: "interacted_button" });
+            }}
             className="group relative cursor-pointer flex flex-col items-center"
           >
             <div className="overflow-hidden h-20 flex items-center justify-center">
@@ -69,7 +74,7 @@ const Partners = () => {
             {CATEGORIES.map((category) => (
               <button
                 key={category}
-                onClick={() => setActiveCategory(category)}
+                onClick={() => handleCategoryClick(category)}
                 className={`px-4 py-2 rounded-full text-lg font-semibold transition-all duration-300 transform active:scale-95 ${
                   activeCategory === category
                     ? "bg-bluefazty text-white shadow-lg scale-105"
@@ -83,6 +88,7 @@ const Partners = () => {
               onClick={() => {
                 setHasInteracted(false);
                 setActiveCategory("Todos");
+                trackEvent("category_filter", { category: "Todos (reset)" });
               }}
               className="ml-2 text-xs text-gray-400 hover:text-red-500 transition-colors"
             >
@@ -103,6 +109,13 @@ const Partners = () => {
             {partner.active ? (
               <Link
                 href={partner.href}
+                onClick={() => {
+                  trackEvent("restaurant_click", {
+                    restaurant_slug: partner.id,
+                    restaurant_name: partner.name,
+                    category: activeCategory,
+                  });
+                }}
                 className="flex flex-col items-center border-none bg-inherit bg-none align-middle transform hover:scale-105 transition-all duration-300"
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-sm group-hover:shadow-2xl transition-shadow duration-300">

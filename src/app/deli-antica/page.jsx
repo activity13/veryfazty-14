@@ -1,6 +1,7 @@
 import Slider from "../ui/imageSquareSlider";
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 
 export const metadata = {
   title: "Deli Antica | Market Gourmet & Delivery en Vichayito",
@@ -101,6 +102,11 @@ export default function DeliAntica() {
 
   return (
     <div className="max-w-screen min-h-screen">
+      <RestaurantViewTracker
+        restaurantSlug="deli-antica"
+        restaurantName="Deli Antica"
+        category="Market Gourmet"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <div className="flex justify-center">
         <div className="max-w-md justify-center">

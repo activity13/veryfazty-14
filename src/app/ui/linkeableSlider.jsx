@@ -6,6 +6,7 @@ import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { trackEvent } from "@/src/lib/analytics";
 
 export default function SimpleSlider({ promos, isMobile }) {
   const settings = {
@@ -59,11 +60,35 @@ export default function SimpleSlider({ promos, isMobile }) {
                   target="_blank"
                   rel="noreferrer"
                   className="block outline-none"
+                  onClick={() => {
+                    trackEvent("promo_click", {
+                      promo_id: promo.id,
+                      promo_type: "whatsapp",
+                      restaurant_name: promo.alt,
+                    });
+                    trackEvent("whatsapp_click", {
+                      source: "promo",
+                      restaurant_name: promo.alt,
+                      phone: promo.whatsappNumber,
+                      message: promo.whatsappMessage,
+                    });
+                  }}
                 >
                   {ImageComponent}
                 </a>
               ) : (
-                <Link href={href} className="block outline-none">
+                <Link
+                  href={href}
+                  className="block outline-none"
+                  onClick={() => {
+                    trackEvent("promo_click", {
+                      promo_id: promo.id,
+                      promo_type: "internal",
+                      restaurant_name: promo.alt,
+                      internal_link: promo.internalLink,
+                    });
+                  }}
+                >
                   {ImageComponent}
                 </Link>
               )}

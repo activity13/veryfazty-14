@@ -1,6 +1,7 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 
 export const metadata = {
   title: "Playa Palmeras | Delivery de Comida Marina y Nikkei en Vichayito",
@@ -114,6 +115,11 @@ export default function PlayaPlameras() {
 
   return (
     <div className="min-h-screen">
+      <RestaurantViewTracker
+        restaurantSlug="playa-palmeras-vichayito"
+        restaurantName="Playa Palmeras"
+        category="Comida Marina & Nikkei"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard
         options={options}

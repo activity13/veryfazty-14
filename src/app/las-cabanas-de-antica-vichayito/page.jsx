@@ -1,6 +1,7 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 export const metadata = {
   title: "Las Cabañas de Antica | Pizzería & Hotel en Vichayito",
   description:
@@ -92,6 +93,11 @@ export default function AnticaPizzeria() {
 
   return (
     <div className="min-h-screen">
+      <RestaurantViewTracker
+        restaurantSlug="las-cabanas-de-antica-vichayito"
+        restaurantName="Las Cabañas de Antica"
+        category="Pizzas & Pastas"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />

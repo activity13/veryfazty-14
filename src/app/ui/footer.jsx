@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { trackEvent } from "@/src/lib/analytics";
+
 const Footer = () => {
   return (
     <div className="relative">
@@ -20,6 +24,12 @@ const Footer = () => {
               href="https://wa.me/51924380097"
               rel="noreferrer"
               target="_blank"
+              onClick={() => {
+                trackEvent("whatsapp_click", {
+                  source: "footer",
+                  phone: "51924380097",
+                });
+              }}
             >
               <u>+51 924 380 097</u>
             </a>
@@ -59,6 +69,12 @@ const Footer = () => {
           href="https://wa.me/51924380097"
           rel="noreferrer"
           target="_blank"
+          onClick={() => {
+            trackEvent("whatsapp_click", {
+              source: "floating_bar",
+              phone: "51924380097",
+            });
+          }}
         >
           <u className="mr-2 mt-1 flex items-center">¡Haz tu pedido!</u>
           <span className="mt-2 flex items-center">+51 924 380 097</span>

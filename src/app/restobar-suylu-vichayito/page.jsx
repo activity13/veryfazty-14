@@ -1,6 +1,7 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 export const metadata = {
   title: "Suylu Vichayito | Delivery & Restobar en Vichayito y Las Pocitas",
   description:
@@ -114,6 +115,11 @@ export default function Suylu() {
 
   return (
     <div className="min-h-screen">
+      <RestaurantViewTracker
+        restaurantSlug="restobar-suylu-vichayito"
+        restaurantName="Restobar Suylu"
+        category="Parrillas & Pollo a la Brasa"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />

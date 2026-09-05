@@ -1,8 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { trackEvent } from "@/src/lib/analytics";
 
 export default function LaK() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    trackEvent("restaurant_view", {
+      restaurant_slug: "la-k",
+      restaurant_name: "La K",
+      category: "Restaurante",
+    });
+    trackEvent("carta_click", {
+      restaurant_slug: "la-k",
+      restaurant_name: "La K",
+      method: "embed",
+    });
+  }, []);
 
   return (
     <div className="relative m-0 h-[100dvh] w-full overflow-hidden bg-white p-0">

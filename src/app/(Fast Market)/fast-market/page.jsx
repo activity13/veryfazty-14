@@ -1,8 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { trackEvent } from "@/src/lib/analytics";
 
 export default function MarketVichayito() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    trackEvent("restaurant_view", {
+      restaurant_slug: "fast-market",
+      restaurant_name: "Fast Market",
+      category: "Minimarket",
+    });
+    trackEvent("carta_click", {
+      restaurant_slug: "fast-market",
+      restaurant_name: "Fast Market",
+      method: "embed",
+    });
+  }, []);
 
   return (
     <div className="relative m-0 h-screen w-full overflow-hidden bg-white p-0">

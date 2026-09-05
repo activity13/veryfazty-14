@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState, useMemo, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import ImageWithLoader from "./ImageWithLoader";
+import { trackEvent } from "@/src/lib/analytics";
 
 function RestaurantCardContent({ options, alt, description, disclaimer }) {
   // Determinamos si las opciones tienen un nivel extra de anidación
@@ -65,7 +66,13 @@ function RestaurantCardContent({ options, alt, description, disclaimer }) {
               return (
                 <button
                   key={menuName}
-                  onClick={() => setActiveMenu(menuName)}
+                  onClick={() => {
+                    setActiveMenu(menuName);
+                    trackEvent("menu_tab_change", {
+                      restaurant_slug: typeof window !== "undefined" ? window.location.pathname.replace("/", "") : "",
+                      tab_name: menuName,
+                    });
+                  }}
                   className={`rounded-full px-6 py-1.5 text-lg font-semibold transition-all duration-300 md:text-base ${
                     isActive
                       ? "bg-bluefazty text-white shadow-md"
@@ -91,7 +98,14 @@ function RestaurantCardContent({ options, alt, description, disclaimer }) {
             return (
               <button
                 key={index}
-                onClick={() => setSelectedOption(val)}
+                onClick={() => {
+                  setSelectedOption(val);
+                  trackEvent("menu_tab_change", {
+                    restaurant_slug: typeof window !== "undefined" ? window.location.pathname.replace("/", "") : "",
+                    tab_name: activeMenu || "Principal",
+                    sub_option: name,
+                  });
+                }}
                 className={`focus:outline-bluefazty flex-shrink-0 rounded-full px-4 py-1 text-base font-medium transition delay-75 duration-75 ease-linear hover:-translate-y-0.5 hover:scale-110 focus:outline-2 focus:outline-offset-2 md:px-4 md:py-1 md:text-lg
               ${isSelected ? "bg-bluefazty  text-white" : "bg-gray-100 text-black hover:bg-blue-200"}
               `}

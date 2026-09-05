@@ -1,8 +1,22 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { trackEvent } from "@/src/lib/analytics";
 
 export default function LaRinconada() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    trackEvent("restaurant_view", {
+      restaurant_slug: "la-rinconada",
+      restaurant_name: "La Rinconada",
+      category: "Carnes & Parrillas",
+    });
+    trackEvent("carta_click", {
+      restaurant_slug: "la-rinconada",
+      restaurant_name: "La Rinconada",
+      method: "embed",
+    });
+  }, []);
 
   return (
     <div className="relative m-0 h-[100dvh] w-full overflow-hidden scrollbar-none bg-white p-0">

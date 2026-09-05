@@ -1,6 +1,7 @@
 import Cartelera from "../ui/cartelera";
 import BackArrow from "../ui/back_arrow";
 import RestaurantCard from "../ui/menuLoader";
+import RestaurantViewTracker from "../ui/RestaurantViewTracker";
 
 export const metadata = {
   title: "Bros Food | Delivery de Hamburguesas y Pizzas en Vichayito",
@@ -95,6 +96,11 @@ export default function BrosFood() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
+      <RestaurantViewTracker
+        restaurantSlug="brosfood"
+        restaurantName="Bros Food"
+        category="Hamburguesas & Pizzas"
+      />
       <Cartelera config={resto_config} alt={alt} description={description} />
       <RestaurantCard options={options} alt={alt} description={description} />
       <BackArrow />

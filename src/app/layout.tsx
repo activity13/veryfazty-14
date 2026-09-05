@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import Header from "@/src/app/ui/header";
 import Footer from "@/src/app/ui/footer";
-import Head from "next/head";
+import AnalyticsListener from "@/src/app/ui/AnalyticsListener";
+import GoogleAnalytics from "@/src/app/ui/GoogleAnalytics";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./ui/globals.css";
@@ -23,9 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <Head>
-        <meta name="robots" content="all" />
-      </Head>
       <body>
         <nav className="flex h-1/4 flex-col justify-center align-middle">
           <Header />
@@ -36,9 +33,9 @@ export default function RootLayout({
         </section>
         <Analytics />
         <SpeedInsights />
+        <AnalyticsListener />
+        <GoogleAnalytics gaId="G-LSX20PFRX6" />
       </body>
-      <GoogleAnalytics gaId="G-YQSMK35DN8" />
-      <GoogleTagManager gtmId="G-YQSMK35DN8" />
     </html>
   );
 }
