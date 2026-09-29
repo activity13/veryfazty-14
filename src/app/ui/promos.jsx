@@ -9,6 +9,16 @@ import { useState, useEffect } from "react";
 // Se definen los tipos: "whatsapp" (externo) o "internal" (redirección a página)
 const PROMOS_DATA = [
   {
+    id: "2x1-dos-por-uno-en-pizzas-la-k-promocion-martes",
+    desktopImage: "banner_2x1_la_k.webp",
+    mobileImage: "banner_mini_2x1_la_k.webp",
+    type: "whatsapp",
+    whatsappNumber: "51924380097",
+    whatsappMessage: "Hola, me gustaria pedir la promo martes de 2x1 en pizzas de La K",
+    internalLink: "",
+    alt: "En La K los martes son de dos por uno en pizzas. Aplica terminos y condiciones.",
+  },
+  {
     id: "viernes-de-chifa-playa-palmeras",
     desktopImage: "banner_pp_chifa_d.webp",
     mobileImage: "banner_pp_chifa.webp",
